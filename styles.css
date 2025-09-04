@@ -1,0 +1,87 @@
+:root{
+  --c1:#2E7D32; /* primário */
+  --c2:#1B5E20; /* escuro */
+  --c3:#66BB6A; /* destaque */
+  --c4:#A5D6A7; /* claro */
+  --c5:#E8F5E9; /* muito claro */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: 'Open Sans', system-ui, -apple-system, Arial, sans-serif;
+  color: var(--c2);
+  background: var(--c5);
+  line-height: 1.6;
+}
+.skiplink{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skiplink:focus{left:0;width:auto;height:auto;background:var(--c3);color:white;padding:.5rem 1rem;border-radius:.5rem;}
+
+.topo{
+  background:#fff; /* menu pode ser branco */
+  position:sticky; top:0; z-index:999;
+  border-bottom: 4px solid var(--c1);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.5rem 1rem;
+}
+.brand{display:flex; align-items:center; gap:.75rem;}
+.logo{width:36px;height:36px;border-radius:.5rem}
+.site-title{font-family:'Playfair Display', serif; font-size:1.5rem; color:var(--c1)}
+.menu ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.menu a{font-family:'Montserrat', sans-serif;text-decoration:none;color:var(--c2);padding:.5rem .75rem;border-radius:.75rem;transition:.2s}
+.menu a:hover, .menu a:focus{background:var(--c4); color:#093; outline:none}
+
+.banner{
+  background: linear-gradient(120deg, var(--c1), var(--c3)), url('https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+  color:white; padding:6rem 1rem; text-align:center;
+}
+.banner h1{font-family:'Playfair Display', serif; font-size:clamp(2rem,4vw,3rem); margin:0 0 .5rem}
+.banner p{font-family:'Lato', sans-serif; max-width:60ch; margin:0 auto 1rem}
+.banner .cta{background:white;color:var(--c1);padding:.75rem 1rem;border:none;border-radius:1rem;font-weight:700;cursor:pointer}
+.banner .cta:hover{filter:brightness(.95)}
+
+.section{padding:2rem 1rem}
+.bg1{background:var(--c5)} /* cada seção com cor distinta, todas da paleta */
+.bg2{background:var(--c4)}
+.bg3{background:var(--c3); color:#083a0f}
+.bg4{background:var(--c1); color:white}
+.bg5{background:#cfead3}
+
+.grid{display:grid; gap:1rem}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:white;border-radius:1rem; padding:1rem; box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.card h3{margin-top:0; font-family:'Merriweather', serif}
+
+figure{margin:0}
+figure img{width:100%; border-radius:1rem}
+figcaption{font-size:.9rem; opacity:.8}
+
+.media{max-width:720px;margin:1rem auto; display:block; width:100%; border-radius:1rem; overflow:hidden}
+
+.rodape{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:1.5rem;background:var(--c2);color:white}
+.rodape a{color:white;text-decoration:underline}
+.icones{display:flex;gap:.75rem;margin-top:.5rem}
+.icon svg{width:28px;height:28px;fill:white;opacity:.9;transition:.2s}
+.icon:hover svg{opacity:1; transform:scale(1.08)}
+
+blockquote{border-left:4px solid var(--c1); padding-left:.75rem; margin-left:0; color:#0c3f1a; background:var(--c5)}
+
+.galeria{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem;
+}
+.galeria .item{background:white;border-radius:1rem;padding:1rem}
+.galeria .item h4{margin:.5rem 0 0}
+
+.form{background:white;border-radius:1rem;padding:1rem}
+fieldset{border:2px solid var(--c4); border-radius:.75rem; margin-bottom:1rem}
+legend{padding:0 .5rem; font-weight:700; color:var(--c1)}
+label{display:block; margin:.5rem 0 .25rem}
+input, select, textarea{width:100%; padding:.6rem .7rem; border:1px solid var(--c4); border-radius:.5rem}
+input[type=radio], input[type=checkbox]{width:auto}
+button[type=submit]{background:var(--c1); color:white; border:none; padding:.8rem 1.1rem; border-radius:.75rem; cursor:pointer; font-weight:700}
+button[type=submit]:hover{background:var(--c3)}
+
+.listas{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem}
+.listas ul, .listas ol{background:white; border-radius:1rem; padding:1rem justify-content center;}
+.listas li{margin:.35rem 0}
+
+.kicker{font-family:'Montserrat', sans-serif; letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; color:#093}
